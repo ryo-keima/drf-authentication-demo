@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  basic:
+    container_name: basic-auth-app
+    restart: always
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    command: python3 basic_auth/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./projects:/app
+    ports:
+      - "8001:8000"
+    tty: true
