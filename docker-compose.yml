@@ -13,3 +13,15 @@ services:
     ports:
       - "8001:8000"
     tty: true
+  token:
+    container_name: token-auth-app
+    restart: always
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    command: python3 token_auth/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./projects:/app
+    ports:
+      - "8002:8000"
+    tty: true
