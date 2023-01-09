@@ -5,10 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Django: basic_auth",
+            "name": "basic_auth",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/projects/basic_auth/manage.py",
+            "args": [
+                "runserver",
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "token_auth",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/token_auth/manage.py",
             "args": [
                 "runserver",
             ],
