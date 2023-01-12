@@ -12,5 +12,3 @@ class UserViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated, )
 
-    def create(self, request, *args, **kwargs):
-        return super().create(request, *args, **kwargs)
