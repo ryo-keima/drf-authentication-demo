@@ -24,8 +24,6 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         user.full_clean()
 
-        Token.objects.create(user=user)
-
         return user
 
     def create_user(self, email, username, password=None, **extra_fields):
