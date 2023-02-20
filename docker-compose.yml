@@ -25,3 +25,15 @@ services:
     ports:
       - "8002:8000"
     tty: true
+  session:
+    container_name: session-auth-app
+    restart: always
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    command: python3 session_auth/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./projects:/app
+    ports:
+      - "8003:8000"
+    tty: true
