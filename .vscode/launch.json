@@ -25,6 +25,17 @@
             ],
             "django": true,
             "justMyCode": true
-        }
+        },
+        {
+            "name": "session_auth",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/projects/session_auth/manage.py",
+            "args": [
+                "runserver",
+            ],
+            "django": true,
+            "justMyCode": true
+        },
     ]
 }
